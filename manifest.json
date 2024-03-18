@@ -1,0 +1,29 @@
+{
+    "name": "Chained Risk Odds",
+    "description": "Leash territories to calculate a 99% accurate chance for dominating12",
+    "manifest_version": 3,
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "images/icon16.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://dominating12.com/game/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
+}
